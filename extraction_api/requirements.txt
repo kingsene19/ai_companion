@@ -1,0 +1,6 @@
+fastapi==0.78.0
+starlette==0.19.1
+uvicorn==0.17.6
+Pillow==9.3.0
+regex
+python-multipart

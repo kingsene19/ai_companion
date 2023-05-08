@@ -1,0 +1,11 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbU4uSgzKTU+J7UsNaeWOMOSM1KTs6E6CJoYCwDwPj6B": "action_listen",
+    "eJyNjFEKgCAQBa+yB+gEXiViMX3Rkm2h5o9494T6r78ZGGasbaB6RhS2LsuhhuoDrHaHoVeCpAzt7ZUQeyPaNRvySC7KDA4oCO3fzK1wGy+C4L+P0w3tRz5t": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbU4uSgzKTW+ODkjPz+ntjYWABHDH5Y=": "utter_describe_school",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbU4uSgzKTW+ODkjPz+nloBppSUlqUXx6JoImxoLAEBKQMo=": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEohJbU4uSgzKTW+ODkjPz+nloBppSUlqUXx6JooNZWAGxPT0jKLcmtrYwFEGlr8": "utter_describe_details",
+    "eJyljkEKgDAMBL/SB/iCfkWkxDZioLaSpF6Kf7egJ0FEvO3A7rB93TtTV8bNgVfKyZp6BpdgQWsuiCSKqXWLILcOpYZqTUDxTCM68XPOcX+xFVVkdx/9tb58hGkiXj5eC6hAUZ5twwGSXXjb": "action_listen"
+  }
+}

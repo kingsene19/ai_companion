@@ -1,0 +1,114 @@
+version: "3.1"
+
+stories:
+
+- story: user chooses to learn more
+  steps:
+  - intent: describe_school
+  - action: utter_describe_school
+  - intent: affirm_details
+  - action: utter_describe_details
+
+- story: user chooses not to learn more
+  steps:
+  - intent: describe_school
+  - action: utter_describe_school
+  - intent: deny
+  - action: utter_deny
+
+- story: user want to learn about school
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: describe_school
+    entities:
+    - college: ept
+  - action: utter_describe_school
+  - intent: affirm_details
+  - action: utter_describe_details
+  - intent: describe_admission
+  - action: utter_describe_admission
+  - intent: describe_formation
+    entities:
+    - classes: formation
+  - action: utter_describe_formation
+  - intent: describe_level
+    entities:
+    - level: specialization
+  - slot_was_set:
+    - level: specialization
+  - action: action_check_level
+  - intent: describe_level
+    entities:
+    - level: specialization
+  - slot_was_set:
+    - level: specialization
+  - action: action_check_level
+  - intent: describe_fields
+    entities:
+    - field: civil engineering
+  - slot_was_set:
+    - field: civil engineering
+  - action: action_check_field
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: user wants information about campus
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: describe_school
+    entities:
+    - college: school
+  - action: utter_describe_school
+  - intent: deny
+  - action: utter_deny
+  - intent: describe_campus
+  - action: utter_describe_campus
+  - intent: list_shops
+  - action: utter_list_shops
+  - intent: list_facilities
+  - action: utter_list_facilities
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: user wants information about the menu
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: who_are_you
+  - action: utter_iamabot
+  - intent: ask_menu_overview
+  - action: action_utter_menu_overview
+  - intent: ask_meals_day
+    entities:
+    - day: today
+  - slot_was_set:
+    - day: today
+  - action: action_utter_meals_day
+  - intent: ask_meal_day
+    entities:
+    - meal_time: dinner
+    - day: tomorrow
+  - slot_was_set:
+    - meal_time: dinner
+  - slot_was_set:
+    - day: tomorrow
+  - action: action_utter_meal_day
+  - intent: ask_meal_day
+    entities:
+    - meal_time: dinner
+    - day: today
+  - slot_was_set:
+    - meal_time: dinner
+  - slot_was_set:
+    - day: today
+  - action: action_utter_meal_day
+  - intent: ask_specific_meal
+    entities:
+    - meal: soupe
+  - slot_was_set:
+    - meal: soupe
+  - action: action_utter_specific_meal
+  - intent: ask_specific_meal
+  - action: action_utter_specific_meal

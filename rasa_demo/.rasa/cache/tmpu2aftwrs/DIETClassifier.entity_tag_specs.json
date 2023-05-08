@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-classes",
+      "2": "I-classes",
+      "3": "L-classes",
+      "4": "U-classes",
+      "5": "B-college",
+      "6": "I-college",
+      "7": "L-college",
+      "8": "U-college",
+      "9": "B-field",
+      "10": "I-field",
+      "11": "L-field",
+      "12": "U-field",
+      "13": "B-level",
+      "14": "I-level",
+      "15": "L-level",
+      "16": "U-level",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-classes": 1,
+      "I-classes": 2,
+      "L-classes": 3,
+      "U-classes": 4,
+      "B-college": 5,
+      "I-college": 6,
+      "L-college": 7,
+      "U-college": 8,
+      "B-field": 9,
+      "I-field": 10,
+      "L-field": 11,
+      "U-field": 12,
+      "B-level": 13,
+      "I-level": 14,
+      "L-level": 15,
+      "U-level": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

@@ -1,0 +1,188 @@
+version: '3.1'
+actions:
+- action_check_current_intent_and_respond
+- action_check_field
+- action_check_level
+- action_utter_meal_day
+- action_utter_meals
+- action_utter_meals_day
+- action_utter_menu_overview
+- action_utter_specific_meal
+- utter_deny
+- utter_describe_admission
+- utter_describe_campus
+- utter_describe_details
+- utter_describe_formation
+- utter_describe_school
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_list_facilities
+- utter_list_shops
+entities:
+- meal
+- meal_time
+- day
+- college
+- classes
+- field
+- level
+- cursus
+- subject
+- subject_time
+- classe
+- time_type
+slots:
+  field:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: field
+  level:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: level
+  meal:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: meal
+  meal_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: meal_time
+  day:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: day
+  subject:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: subject
+  subject_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: subject_time
+  classe:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: classe
+  time_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: time_type
+  activation_intent:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+forms:
+  schedule_classe_form:
+    required_slots:
+    - classe
+  field_form:
+    required_slots:
+    - field
+intents:
+- affirm
+- affirm_details
+- ask_meal_day
+- ask_meals
+- ask_meals_day
+- ask_menu_overview
+- ask_schedule_overview
+- ask_specific_meal
+- ask_subjects_specific_time
+- ask_sujects_day
+- ask_time
+- ask_times_subjects
+- buy_tickets
+- deny
+- describe_admission
+- describe_campus
+- describe_fields
+- describe_formation
+- describe_level
+- describe_school
+- goodbye
+- greet
+- inform_field
+- list_facilities
+- list_shops
+- mood_good
+- mood_sad
+- who_are_you
+responses:
+  utter_greet:
+  - text: Hi! How are you doing?
+  - text: Hello, I am PolyBot. How may I assist you?
+  - text: Hi, I am here to help
+  utter_goodbye:
+  - text: Bye, have a nice day!
+  - text: Hope I was helpful
+  - text: Goodbye, see you soon!
+  utter_mood_good:
+  - text: Great, would you like some help?
+  - text: Happy to hear, I am here to help!
+  - text: Good, how can I help you?
+  utter_mood_sad:
+  - text: How unfortunate, how can I assist you?
+  - text: Sad to hear, I am here to assist you.
+  - text: Unfortunate, anything I can help with?
+  utter_affirm:
+  - text: Nice, do you need anything else?
+  - text: Is there anything else I could assit with?
+  - text: Good, do you need something?
+  utter_deny:
+  - text: Sorry to disappoint, is there anything I could help with?
+  utter_describe_school:
+  - text: Thies Polytechnique is the first design engineering school in Senegal. EPT was founded in 1973 with two engineering departments. Today, it has several. Its fundamental mission is to provide the young generation with very high-level training in the field of engineering by combining education, research and innovation. Would you like to know more?
+  utter_describe_details:
+  - text: The vision of EPT is that of an elite school, at the service of sustainable development, rooted in the tradition of excellence, rooted in Senegalese values ​​and open to the whole world. It is a center of excellence that aims to provide the best scientific and technological capacities to Senegal and Africa, in order to propel and support the development of the continent based on its traditional values ​​(Wisdom, Knowledge, Duty and innovation). For more information you can visit https://ept.sn/mot-du-directeur
+  utter_describe_admission:
+  - text: The admission of students in the first year of the first cycle to the EPT is by competitive examination among holders of the baccalaureate in the scientific and/or technical series, aged under twenty-two of the year of admission. Each year, the competition is held in June before the baccalaureate exams. Examination centers are open in all regions of Senegal.
+  utter_describe_formation:
+  - text: 'The five year training cycle, open to scientific and/or technical baccalaureate holders, after competition, is divided into two parts: the Common Core (two years) and the Specialization (three years).'
+  utter_describe_common:
+  - text: The Common Core department of the Ecole Polytechnique de Thies aims to establish, in four semesters, a base of scientific and technical training like the scientific preparations integrated into the major engineering schools. It is a multidisciplinary training divided between basic sciences (Mathematics, physics, chemistry), engineering sciences, management, ICT and workshops. The courses are common for the first three semesters and a beginning of specialization is started in the fourth semester in the chosen engineering sector. At the end of this training, the student will have acquired the scientific tools required to follow his career in the sector normally.
+  utter_list_fields:
+  - text: There are five engineering specialization being taught at the school. Civil Engineering, Computer and Telecommunications Engineering, Electromechanical Engineering, Aeronautical Engineering and Industrial engineering. Would you like some information about a particular field?
+  utter_describe_fields/gc:
+  - text: The Civil Engineering department aims to train generalist engineers with a good balance between scientific and technological knowledge oriented towards construction sciences. The training aims to provide the engineer with broad skills, based on the complementarity of the multidisciplinary scientific and technical knowledge that comes under Civil Engineering.
+  utter_describe_fields/gi:
+  - text: he Industrial Engineering program at EPT is designed to provide students with the necessary knowledge and skills to address the challenges of the modern industrial sector. The program is based on a combination of theoretical and practical courses, which cover topics such as operations research, statistical quality control, manufacturing processes, logistics and supply chain management, project management, and human factors engineering. Students in the Industrial Engineering program at EPT have access to state-of-the-art facilities and equipment, including modern laboratories for design, simulation, and testing of industrial systems. The program is delivered by highly qualified and experienced faculty members who are actively engaged in research and innovation in the field of industrial engineering.
+  utter_describe_fields/gem:
+  - text: The Electromechanical Engineering department aims to train design engineers in the fields of electronics, electrical engineering and mechanics. Its objective is to train generalist engineers with a good balance between scientific, technological and systems knowledge. Training in this specialty makes it possible to take into account, in a simultaneous engineering approach, all the data relating to the life of a product or system, from the preliminary design to its completion and eventual recycling. The training offered by the electromechanical engineering department is the Electromechanical Design Engineer Diploma. The program aims to provide the engineer with broad skills, based on the complementarity of multidisciplinary scientific and technical knowledge that fall under Mechanical Engineering and Electrical Engineering.
+  utter_describe_fields/ga:
+  - text: Students in the aeronautical engineering program at Thies Polytechnic take courses in aerodynamics, propulsion, materials science, mechanics, and control systems. These courses provide students with a deep understanding of the fundamental concepts that underpin aircraft design and operation. In addition to classroom learning, students in the aeronautical engineering program at EPT have the opportunity to gain hands-on experience through internships. In fact, the school has partnerships with local industry leaders in the aviation field such as Air Senegal SA, 2AS Technics and Heliconia. Graduates of the aeronautical engineering program at EPT are well-equipped to pursue careers in aircraft design and development, airline operations, and aerospace research. The program emphasizes the importance of innovation, critical thinking, and problem-solving, which prepares graduates to adapt to the rapidly evolving aerospace industry. To sum it up, the aeronautical engineering program at EPT provides students with a comprehensive education in the field, preparing them to be leaders in the aviation industry both in Senegal and around the world.
+  utter_describe_fields/git:
+  - text: Initially planned as one of the axes of the strategic plan of the EPT following the empowerment of the latter in 2009, the Department of Computer Engineering and Telecommunications (GIT) was created in the process by order of the Director of the EPT following to a proposal from the EPT pedagogical council. However, it only opened in 2012-2013. With a start by direct competition at bac +2 level, and accompanied by the recruitment of the teaching staff. The lessons started in March 2013 following a modality of alternating training in partnership with a private company. The training models were the subject of a co-construction with the partner companies both in the design phase and in the implementation of teaching-learning. Training in Computer Engineering and Telecommunications (GIT) has been provided since the 2012-2013 academic year and is carried out, within the EPT, by the Department of Computer Engineering and Telecommunications (GIT). Its objective is to train generalist design engineers in ICT professions.
+  utter_describe_campus:
+  - text: 'EPT fully supports the community life of engineering students. Cement of the school spirit, it contributes to the human training of future engineers in addition to academic training. Rich in initiatives allowing commitment, taking responsibility, exchange and mutual aid within the promotions, associative life is a vast field of experimentation for future managers. In the social campus, there is student accommodation which consists of four buildings H1, H2, H3 and H4. Next to it are play areas: a football pitch, a basketball court and a multisports ground (tennis, handball, volleyball). There is also the cafetaria, another essential place on campus, and the canal room which serves as a TV room and which incidentally serves to house other activities (literature, art and civics club, English club, budding genius match among others…).'
+  utter_list_shops:
+  - text: The social campus contains two shops. Among those there is PolytechShop which is operated by the students, a shop operated by the students. There also is a shop near the cafeteria which known as fast food among students.
+  utter_buy_tickets:
+  - text: You can buy tickets at the shop located at the end of the H1 building.
+  utter_list_facilities:
+  - text: In the social campus, there are also facilites such as a mosque, an infirmery. Next to the infirmery, there is the administration where we have the scolarity, the department offices and also offices for each professor.
+  utter_iamabot:
+  - text: I am PolyBot, your AI companion. My role is to assist you in keeping track of your schedule as well as the cafeteria menu. I can also awnser questions about EPT
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

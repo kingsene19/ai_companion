@@ -1,0 +1,119 @@
+version: "3.1"
+
+rules:
+
+- rule: greet back anytime the user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: say great anytime the user is in a good mood 
+  steps:
+  - intent: mood_good 
+  - action: utter_mood_good
+
+- rule: say great anytime the user is in a sad mood
+  steps:
+  - intent: mood_sad
+  - action: utter_mood_sad
+
+- rule: ask follow up anytime the user affirms
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- rule: ask follow up anytime the user denies
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+- rule: describe the school anytime the user ask about school
+  steps:
+  - intent: describe_school
+  - action: utter_describe_school
+
+- rule: describe the formation anytime the user asks about formation 
+  steps:
+  - intent: describe_formation
+  - action: utter_describe_formation
+
+- rule: describe the admission process the user asks about admission 
+  steps:
+  - intent: describe_admission
+  - action: utter_describe_admission
+
+- rule: describe the campus anytime the user asks about social life
+  steps:
+  - intent: describe_campus
+  - action: utter_describe_campus
+
+- rule: list all shops anytime the user asks about shop
+  steps:
+  - intent: list_shops
+  - action: utter_list_shops
+
+- rule: tell tickets location anytime the user asks
+  steps:
+  - intent: buy_tickets
+  - action: utter_buy_tickets
+
+- rule: list all facilities anytime the user asks
+  steps:
+  - intent: list_facilities
+  - action: utter_list_facilities
+
+- rule: describe yourself anytime the user asks about you
+  steps:
+  - intent: who_are_you
+  - action: utter_iamabot
+
+- rule: list all meals on the menu when the user asks for the menu
+  steps:
+  - intent: ask_menu_overview
+  - action: action_utter_menu_overview
+
+- rule: list all meals on a particular day when the user asks
+  steps:
+  - intent: ask_meals_day
+  - action: action_utter_meals_day
+
+- rule: list meal on a particular day when the user asks
+  steps:
+  - intent: ask_meal_day
+  - action: action_utter_meal_day
+
+- rule: list particular meals for each days
+  steps:
+  - intent: ask_meals
+  - action: action_utter_meals
+
+- rule: list days for specific meal
+  steps:
+  - intent: ask_specific_meal
+  - action: action_utter_specific_meal
+
+- rule: check specified level if user asks
+  steps:
+  - intent: describe_level
+  - action: action_check_level
+
+- rule: check specified field if user asks
+  steps:
+  - intent: describe_fields
+  - action: action_check_field
+
+- rule: Activate Classe Form 
+  steps:
+  - or:
+    - intent: ask_schedule_overview
+    - intent: ask_subjects_day
+    - intent: ask_subjects_specific_time
+    - intent: ask_times_subjects
+    - intent: ask_exam_time
+  - action: action_check_current_intent_and_respond
+

@@ -1,0 +1,343 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Hello
+    - Hi
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: affirm_details
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - I would
+    - yes please
+    - I want to
+    - I would like so
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_good
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - well
+    - fine
+- intent: mood_sad
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: who_are_you
+  examples: |
+    - who are you?
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what is your purpose?
+    - what can you tell me about yourself?
+    - can you tell me something about yourself?
+    - could you give me some information about yourself?
+    - what can you do
+- intent: describe_school
+  examples: |
+    - tell me about [ept](college)
+    - what can you tell me regarding [thies polytechnique](college)?
+    - describe [polytechnique](college)
+    - give me a description of [ept](college)
+    - i would like information about [thies polytechnique](college)
+    - what information can you give me on [ept](college)?
+    - i need information regarding the [school](college)
+    - give me more information about [polytechnique](college)
+    - tell me about the [school](college)
+- intent: describe_admission
+  examples: |
+    - what is the admission process?
+    - how do you get admitted?
+    - how do you get into [ept](college)?
+    - what is the way to access the [school](college)?
+    - in which way are you admitted into [thies polytechnique](college)?
+    - methods of admission in the [school](college)
+    - how to be admitted to [polytechnique](college)?
+    - what is the admission method to [ept](college)?
+    - how can you be admitted into [thies polytechique](college)?
+    - in what way can you get into [polytechnique](college)?
+    - give me some information about admission
+    - describe the admission process
+    - what is the admission process
+- intent: describe_formation
+  examples: |
+    - can you describe the [cursus](classes) taught at [ept](college)?
+    - tell me about the [formation](classes)
+    - give some informaton about the [cursus](classes)
+    - how is the [formation](classes) dispensed?
+    - what information can you give me about the [cursus](classes)?
+    - what can you tell me regarding the [formation](classes)?
+    - can you give me a description of the [cursus](classes)?
+    - give me  a description of the [formation](classes)
+    - describe the [cursus](classes)
+    - give me some information about the [cursus](classes)
+    - what is the [formation](classes) like
+- intent: describe_level
+  examples: |
+    - how is the [common core](level) organised?
+    - how is the [specialization](level) organised?
+    - what is the [formation](classes) like in [specialization](level)?
+    - give me a description of the [common core](level)
+    - tell me about the [common core](level)
+    - tell me about the [specialization](level)
+    - I would like some information regarding the [common core](level)
+    - give me some information about the [specialization](level)
+    - what information can you tell me regarding [common core](level)?
+    - describe the [specialization](level)
+    - how does the [common core](level) go?
+    - what is the [specialization](level) like?
+    - give me some information regarding the [common core](level)
+    - give me details regarding the [specialization](level)
+    - tell me about [specialization](level)
+- intent: describe_fields
+  examples: |
+    - I want to know more about [civil](field)
+    - give me a description of [mechanical engineering](field)
+    - what information can you give me regarding [computer science](field)
+    - I would like some information about [civil engineering](field)
+    - what is [computer science](field) like
+    - give me details regarding [civil engineering](field)
+    - tell me more about [mecha](field)
+    - what is [aeronautical](field) about
+    - can you tell me more about [industrial engineering](field)
+    - i want to know more about [computer science](field)
+    - tell me more about [civil engineering](field)
+- intent: describe_campus
+  examples: |
+    - how is the commnity life?
+    - what can you tell me about the social campus?
+    - how is the social campus?
+    - describe the community life
+    - give me a description of the social campus
+    - can you describe the community life?
+    - i would like some information regarding the social campus
+    - what information can you tell me about the social campus
+    - i would like to know more about the community life
+    - how is the life on the social campus
+- intent: list_shops
+  examples: |
+    - are there any stores in the campus?
+    - what shops can you find in the campus?
+    - are there locations where i can find my needs?
+    - is there anywhere to buy ?
+    - are there any store
+- intent: buy_tickets
+  examples: |
+    - where can i buy tickets?
+    - in what location can i buy tickets?
+    - how to i buy tickets?
+- intent: list_facilities
+  examples: |
+    - what facilities are available in the [school](college)
+    - can you tell me all available facilites
+    - tell me about the facilities that we can find
+    - give me a list of facilities available in the [school](college)
+    - what facilities are there
+    - which facilities are available
+- intent: ask_menu_overview
+  examples: |
+    - i would like to know about the menu
+    - give me an overview of the menu
+    - what is this months menu?
+    - can you tell me what is on the menu?
+    - tell me about the menu?
+    - what is the content of the menu?
+    - could you give me information about the menu?
+    - i would like some information regarding the menu
+    - can i have an overview of the menu?
+    - tell me what meals are on the menu
+    - tell me about the menu
+- intent: ask_meals_day
+  examples: |
+    - which meals are on the menu [monday](day)?
+    - what is on the menu for [today](day)?
+    - give me information regarding the meals on [wednesday](day)?
+    - i would like to know what meals are available [saturday](day)
+    - tell me which meals are available [wednesday](day)
+    - on [thursday](day) what is on the menu?
+    - tell me about cafeteria meals on [friday](day)
+    - what meals are going to be on the menu for [thrusday](day)?
+    - what are the meals on [today](day)?
+    - tell me about the meals regarding [friday](day)
+    - what is on the menu [today](day)
+    - what is on the menu [tomorrow](day)
+    - what was on the menu [yesterday](day)
+- intent: ask_meal_day
+  examples: |
+    - which [lunch](meal_time) is on the menu [monday](day)?
+    - what is for [dinner](meal_time) for [tuesday](day)?
+    - give me information regarding [lunch](meal_time) on [wednesday](day)?
+    - i would like to know what [lunch](meal_time) is available [saturday](day)
+    - tell me which [dinner](meal_time) is available [wednesday](day)
+    - on [thursday](day) what is for [lunch](meal_time)?
+    - tell me about cafeteria [dinner](meal_time) on [today](day)
+    - what [lunch](meal_time) is going to be on the menu for [thrusday](day)?
+    - what [dinner](meal_time) on [today](day)?
+    - tell me about the [lunch](meal_time) regarding [friday](day)
+    - what will there be for [dinner](meal_time) [tomorrow](day)
+    - what is there for [dinner](meal_time) [today](day)
+- intent: ask_meals
+  examples: |
+    - which [lunches](meal_time) are on the menu?
+    - what [dinners](meal_time) are on the menu?
+    - give me information regarding the [lunches](meal_time)?
+    - i would like to know what [lunches](meal_time) are available
+    - tell me which [dinners](meal_time) are available
+    - which [dinners](meal_time) are there?
+    - tell me about what cafeteria [lunches](meal_time) are on the menu?
+    - what [lunches](meal_time) are going to be on the menu?
+    - what are the [dinners](meal_time)?
+    - tell me about the [lunches](meal_time)
+- intent: ask_specific_meal
+  examples: |
+    - when is [dibi](meal) on the menu?
+    - on which days is [spaghetti](meal) on the menu?
+    - on what days [petit poids](meal) available?
+    - give me information regarding when I can get [thiébou dieune](meal)
+    - when is [paella](meal) available?
+    - tell me on what days [sardine](meal) is on the menu?
+    - which days is [soupe kandia](meal) available?
+    - when can I have [mbakhal](meal) at the cafetaria?
+    - tell me when [fondé](meal) is on the menu?
+    - on which days do we have [sandwich](meal)?
+    - when is [soupe](meal) on the menu
+    - when is poulet on the menu
+- intent: ask_schedule_overview
+  examples: |
+    - what is the schedule for?
+    - give me a shedule overview of
+    - give me an overview of my schedule
+    - tell me the schedule of this week
+    - give me information about schedule
+    - what does the schedule     
+    - tell me about the schedule?
+    - what can you tell me regarding schedule?
+    - i would like some information regarding the schedule
+    - can you tell me about schedule?
+    - tell me about the schedule?
+    - can you tell me about the schedule?
+    - i want information on schedule?
+- intent: ask_subjects_day
+  examples: |
+    - what are the classes for on [tuesday](day)?
+    - give me the courses of [today](day)
+    - give me the subjects for [wednesday](day)
+    - tell me the classes of [tomorrow](day)
+    - give me information about subjects [friday](day)
+    - what classes do I have on [friday](day)?
+    - tell me about the courses [today](day)?
+    - what can you tell me regarding class [thrusday](day)?
+    - i would like some information regarding the courses [tomorrow](day)
+    - can you tell me about the [classes](classe) [friday](day)?
+    - tell me about the courses [yesterday](day)?
+    - can you tell me about the subjects [wednesday](day)?
+    - i want information on courses [tomorrow](day)
+- intent: ask_subjects_specific_time
+  examples: |
+    - what are the classes on [tuesday](day) [afternoon](subject_time)?
+    - give me the courses of [today](day) at [11](subject_time)
+    - give me the subjects for [wednesday](day) [morning](subject_time)
+    - tell me the classes of [tomorrow](day) at [15](subject_time)
+    - give me information about the subjects [friday](day) [morning](subject_time)
+    - what classes do I have on [friday](day) at [09](subject_time)
+    - tell me about the courses [today](day) at [08](subject_time)?
+    - what can you tell me regarding the class [thrusday](day) [afternoon](subject_time)?
+    - i would like some information regarding the courses [tomorrow](day) at [16](subject_time)
+    - can you tell me about [classes](classe) [friday](day) [morning](subject_time)?
+    - tell me about the courses [yesterday](day) at [17](subject_time)?
+    - can you tell me about the subjects [wednesday](day) [morning](subject_time)?
+    - i want information on courses [tomorrow](day) at [15](subject_time)
+- intent: ask_times_subjects
+  examples: |
+    - how many times the [recherche operationnelle](subject)?
+    - give me the frequency of [reseaux informatiques](subject) of
+    - how often do we have subjects
+    - tell me the [recherche operationnelle](subject)
+    - give me information about [trans](subject) frequency
+    - how many times [recherche operationnelle](subject)
+    - tell me about the frequency [reseaux informatiques](subject) ?
+    - what can you tell me regarding the frequency class?
+    - i would like some information on how many time the have [reseaux informatiques](subject)
+    - can you tell me about how often have [recherche operationnelle](subject)?
+- intent: ask_exam_time
+  examples: |
+    - give me the [exam](time_type) schedule for [dic3](classe)?
+    - give me the [free](time_type)
+    - tell me about the [tc1](classe) [exam](time_type)
+    - tell me the [dic3](classe) [free](time_type)
+    - give me information about [dic1](classe) [exam](time_type)
+    - what [exams](time_type) are there
+    - which [free](time_type) are there regarding ?
+    - what can you tell me regarding the [free](time_type)?
+    - i would like some information on how many time the [exams](time_type)
