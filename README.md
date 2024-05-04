@@ -6,4 +6,4 @@ to the classes students have each day as well as the time for which they are pro
 The voicechat app is created using Flutter and we have integrated a chatbot developped with RASA which we use to awnser user inquiries.
 When we have questions pertaining to a dish or class, the chatbot accesses the API to retrieve the relevant information and answers the inquiry.
 
-You can find a demo of the project in the repository through the  **Bot.mp4** file
+You can find a demo of the project in the repository through the  **Bot_Demo.mp4** file
